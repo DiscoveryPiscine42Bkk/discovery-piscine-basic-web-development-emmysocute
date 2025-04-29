@@ -1,0 +1,43 @@
+body, html{
+    margin: 0;
+    height: 100%;
+}
+.img,.img1{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.img {
+    background-image: url("PPg.jpg");
+    min-height: 70%;
+}
+.img1 {
+    background-image: url("Ppg-2016.webp");
+    min-height: 100%;
+}
+
+.text{
+    width: 15%;
+    /* background-color: black; */
+    position: relative;
+    top: 50%;
+    left: 45%;
+    text-align: center;
+    font-size: 30px;
+}
+.textbox{
+    background-color: black;
+    color: antiquewhite;
+    font-size: 30px;
+    height: 20vh;
+}
+.border_text{
+background-color: #111;
+  color: #fff;
+  padding: 10px;
+  font-size: 25px;
+
+}
