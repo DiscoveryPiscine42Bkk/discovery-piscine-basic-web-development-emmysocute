@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todolist</title>
     <link rel="stylesheet" href="C.css">
-    <script src="todo.js"></script>
 </head>
 <body>
-    <div>
-        
+    <div class="box_btn">
+        <button class="btn" onclick="new_list()">
+            add
+        </button>
+        <button class="btn" id="btn_del" onclick="Del()"> 
+            Del
+        </button>
     </div>
+    <div class="ft_list" id="ft_list">
+        <!-- <div class="Text_box">fdgfdgfdgfd</div> -->
+    </div>
+    <script src="todo.js"></script>
 </body>
 </html>
