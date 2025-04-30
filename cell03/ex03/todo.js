@@ -4,19 +4,49 @@
 // div.style.border= "solid";
 // div.style.backgroundColor = "red";
 // document.getElementById("ft_list").appendChild(div);
+// btn.style.display = "none"
+// let btn = document.getElementById("btn_del")
 
-let btn = document.getElementById("btn_del")
 let list =document.getElementById("ft_list")
-btn.style.display = "none"
-function new_list(){
-    let task =prompt("Get you to do : ")
-    let task_p = list.innerHTML
-    list.innerHTML = "<div class=Text_box>"+task+"</div>"+task_p
-    btn.style.display = "block"
+const todos =[]
+let x = 0
+
+const lists = document.cookie.split(",")
+// console.log(lists)
+const result = lists.filter(function s(word){
+   return word !=""
+})
+// console.log(result)
+
+web_open()
+function web_open(){
+    for(let i =0 ; i < result.length ; i++){
+        let task_p = list.innerHTML
+        list.innerHTML = `<div class=Text_box onclick=Del(id) id=${x++}>`+result[i]+"</div>"+task_p
+    }
 }
-function Del(){
-    if(confirm("You want Delete it ???")){
-        list.innerHTML = ""
-    btn.style.display = "none"
+
+function new_list(){
+    let task =prompt("What do you want to do ? ")
+    if(task ===""){
+        alert("Try Again ")
+        return
+    }
+    let task_p = list.innerHTML
+    list.innerHTML = `<div class=Text_box onclick=Del(id) id=${x}>`+task+"</div>"+task_p
+    result[x++] = task 
+    // console.log(x)
+    document.cookie = result
+    // let file = document.cookie
+    // btn.style.display = "block"
+}
+
+function Del(num){
+    // console.log("this"+num)
+    if(confirm("Do you want to delete it ???")){
+        let a = document.getElementById(`${num}`)
+        a.remove()
+        result[num]=null
+        document.cookie = result
     }
 }
