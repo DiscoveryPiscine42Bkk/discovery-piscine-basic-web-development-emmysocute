@@ -10,19 +10,24 @@
 let list =document.getElementById("ft_list")
 const todos =[]
 let x = 0
-console.log(document.cookie)
+// console.log(document.cookie)
 const lists = decodeURIComponent(document.cookie).split(",")
+
 // console.log(lists)
 const result = lists.filter(function s(word){
    return word != ""
 })
-// console.log(result)
+console.log(result)
 
 web_open()
 function web_open(){
     for(let i =0 ; i < result.length ; i++){
         let task_p = list.innerHTML
-        list.innerHTML = `<div class=Text_box onclick=Del(id) id=${x++}>`+result[i]+"</div>"+task_p
+        if(result[i] !=" "){
+            list.innerHTML = `<div class=Text_box onclick=Del(id) id=${x++}>`+result[i]+"</div>"+task_p
+        }else{
+            console.log(result[i])
+        }
     }
 }
 
