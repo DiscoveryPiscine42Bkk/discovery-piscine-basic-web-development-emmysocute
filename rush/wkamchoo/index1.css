@@ -4,7 +4,13 @@ body{
     padding: 0;
     height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    /* justify-content: center;
+    align-self: center; */
+   
+}
+html {
+    scroll-behavior: smooth;
 }
 .navbar{
     display: flex;
@@ -13,11 +19,12 @@ body{
     background-color: #9EC6F3;
     width: 20%;
     height: 100vh;
-    position: sticky;
-    left: 0;
+    position: fixed;       
+    left: 0;              
+    top: 0;  
+     overflow: hidden;
     box-shadow: 3px 3px 10px black;
-
-
+    z-index: 1000; 
 }
 .box_image{
     width: 100%;
@@ -43,7 +50,7 @@ body{
     font-weight: 800;
 }
 
-a{
+.nav{
     display: flex;
     font-family: "Comic Relief", monospace;
     justify-content: space-around;
@@ -57,7 +64,7 @@ a{
     font-weight: 500;
 }
 
-a:hover{
+.nav:hover{
 
     background-color: gray;
     color: white;
@@ -75,14 +82,17 @@ a:hover{
     height: 100%;
 }
 .main_content{
+    margin-left: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width:80% ;
+    height: 100vh;
     background-color: #BDDDE4;
 }
 .typewriter {
-    padding: 5px;
+    padding: 10px;
     font-size: 2vw;
     height: 4vh;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -109,9 +119,139 @@ a:hover{
   .site1_left{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 60%;
-    height: 50%;
+    height: 45%;
     border-style: solid;
     border-radius: 30px;
     /* background-color: black; */
   }
+  .text02{
+    padding: 30px;
+    font-family: "Comic Relief";
+    font-size: 1.3vw;
+  }
+  .btn01{
+    border-style:solid ;
+    background-color: #9FB3DF;
+    border-radius: 10px;
+  }
+  .text_a00{
+    color: white;
+    text-decoration: none;
+    font-family: "Comic Relief";
+    font-size: 1.5vw;
+  }
+.btn01:hover{
+    scale: 1.2;
+    background-color: #FCC6FF;
+  }
+  .page_1{
+    display: flex;
+    justify-content: center;
+    
+  }
+  .page_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #9FB3DF;
+  }
+  .project{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+  }
+  .cerf{
+    border-style: solid;
+    border-radius: 15px;
+    border-color:#9EC6F3 ;
+    width: 20%;
+    height: 30vh;
+    background-color: #9EC6F3;
+    
+  }
+  .project_2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    
+  }
+  .text_03{
+    color: white;
+    padding: 15px;
+    font-family:"Comic Relief",monospace ;
+    font-size: 3vw;
+  }
+  .page2_1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    /* margin-right: 20%; */
+    height: 100vh;
+    width: 100%;
+  }
+  .box_image01{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 50%;
+    height: 30vh;
+    
+  }
+  .image_01{
+    width: 40%;
+    height: 50vh;
+    border-style: solid;
+    border-color: white;
+    border-radius: 20px;
+    /* object-fit: cover; */
+  }
+  .about_me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-style: solid;
+    border-color: #BDDDE4;
+    border-radius: 20px;
+    width: 40%;
+    height: 60vh;
+    /* background-color: #BDDDE4; */
+  }
+  .text_Profile{
+        width: 55%;
+        color: white;
+        padding: 15px;
+        font-family:"Comic Relief",monospace ;
+        font-size: 2.5vw;
+        text-align: left;
+  }
+  .text_02{
+    text-align: center;
+    padding: 10px;
+    font-family: "Comic Relief",monospace ;
+    font-size: 1.4vw;
+  }
+.skill{
+    font-size: 1.3vw;
+    font-family: "Comic Relief",monospace ;
+}
+.page_3{
+    margin-left: 20%;
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
