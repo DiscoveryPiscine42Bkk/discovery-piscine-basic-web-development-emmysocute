@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cal</title>
+    <link rel="stylesheet" href="cal.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="input_box">
+            <input style="width: 30%; height: 100%;" type="number" name="" id="num1">
+
+            <select id="Select" style="height: 120%;width: 20%;">
+                <option value="+">
+                    +
+                </option>
+                <option value="-">
+                    -
+                </option>
+                <option value="*">
+                    *
+                </option>
+                <option value="/">
+                    /
+                </option>
+                <option value="%">
+                    %
+                </option>
+            </select>
+            <input style="width: 30%;height: 100%;" type="number" id="num2">
+        </div>
+        <div class="btn">
+            <button class="stbtn" id="btn01">
+                Try me !!
+            </button>
+        </div>
+
+    </div>
+    <script>
+        window.setInterval(function (){alert("Please, use me...")},30000)
+        $("#btn01").click(function () {
+            var num = $("#num1").val()
+            var num1 = $("#num2").val()
+            var sign = $("#Select").val()
+            if(num =="" || num1 ==""){
+                alert("pls fill it")
+                return;
+            }
+            var eq = eval(`${num}${sign}${num1}`)
+            if (eq <= 0) {
+                alert("Error :(")
+            } else if (eq === Infinity || isNaN(eq)) {
+                alert("It’s over 9000!")
+            } else {
+                alert(eq)
+                console.log(eq)
+            }
+        })
+
+    </script>
+</body>
+
+</html>

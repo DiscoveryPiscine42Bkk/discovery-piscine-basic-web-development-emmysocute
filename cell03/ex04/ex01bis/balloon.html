@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="DD.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <center>
+        
+        <div id="D" class="a">
+            
+        </div>
+    </center>
+    <script>
+        var color = ["red","green","blue"]
+        var i = 0;
+        $(document).ready(function(){
+            $("#D").click(function(){
+                //  alert($("#D").width())
+                
+               var w =  $("#D").width()
+               var h =  $("#D").height()
+            //    console.log($("#D").width())
+               $("#D").css("width",w+10 +"px")
+               $("#D").css("height",h+10+"px")
+               i++;
+               if(i > 2 ){
+                 i = 0
+               }
+               $("#D").css("background",`${color[i]}`)
+                if(w >=420){
+               $("#D").css("width",200 +"px")
+               $("#D").css("height",200+"px")
+                }
+            })
+            $("#D").mouseout(function(){
+                var w =  $("#D").width()
+               var h =  $("#D").height()
+            //    console.log($("#D").width())
+                i--;
+                if(i < 0){
+                    i = 2
+                }
+               $("#D").css("background",`${color[i]}`)
+               $("#D").css("width",w-5 +"px")
+               $("#D").css("height",h-5+"px")
+               if(w <= 200){
+                $("#D").css("width",200 +"px")
+                $("#D").css("height",200+"px")
+               }
+            })
+        })
+    </script>
+</body>
+</html>
